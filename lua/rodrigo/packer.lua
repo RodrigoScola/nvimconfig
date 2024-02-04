@@ -15,18 +15,22 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    use("github/copilot.vim")
+    --use("github/copilot.vim")
     use("theprimeagen/harpoon")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+    -- use({
+    --     'rose-pine/neovim',
+    --     as = 'rose-pine',
+    --     config = function()
+    --         vim.cmd('colorscheme rose-pine')
+    --     end
+    -- })
+
+    use({ "ellisonleao/gruvbox.nvim", })
+
+
 
 
 
@@ -67,11 +71,23 @@ return require('packer').startup(function(use)
     }
 
 
-    use 'prettier/vim-prettier'
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     use {
         "williamboman/mason.nvim",
         "mfussenegger/nvim-lint",
         "rshkarin/mason-nvim-lint",
     }
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            { "nvim-lua/plenary.nvim" },
+            { "nvim-treesitter/nvim-treesitter" }
+        }
+
+
+    }
+
+
+    use 'm4xshen/autoclose.nvim'
 end)

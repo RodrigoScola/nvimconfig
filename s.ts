@@ -1,22 +1,9 @@
-const a = [
-    "hello",
-    "there",
+const a = ['hello', 'there', 'my', 'friendo'];
 
-
-    "my",
-    "friendo"
-
-];
-
-
-function b
-
-    () {
-
-
+{ }
+function b(): void {
     console.log(a);
 }
 
-
-const l = 'hello';
-
+if (true || false) {
+}

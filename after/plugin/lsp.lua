@@ -65,7 +65,7 @@ local cmp_select = { behavio = cmp.SelectBehavior.Select }
 
 
 cmp.setup({
-
+    --[[
     completion = {
         autocomplete = false
     },
@@ -74,6 +74,7 @@ cmp.setup({
             autocomplete = false
         }
     },
+    ]] --
     sources = {
         { name = "path" },
         { name = "nvim_lsp" },

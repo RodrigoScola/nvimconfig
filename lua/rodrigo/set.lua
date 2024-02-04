@@ -23,13 +23,9 @@ vim.opt.incsearch = true
 
 
 vim.opt.guifont = "Fira Code"
+vim.opt.
 
 --vim.opt.termguicolors = true
-
-
-
-
-
 vim.opt.scrolloff = 20
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")

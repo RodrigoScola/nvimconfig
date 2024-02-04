@@ -24,4 +24,4 @@ local config = {
 
 }
 
-require("autoclose").setup(config)
+--require("autoclose").setup(config)

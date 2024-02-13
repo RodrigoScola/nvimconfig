@@ -10,6 +10,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set("n", "<Leader>;", ":")
+
+
+
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -38,6 +42,14 @@ vim.keymap.set("n", "<leader>k", "V%");
 
 vim.keymap.set("n", "<C-w>", "ldb");
 
-
+--[[
 vim.keymap.set("n", "<leader>f", ":Format<CR>")
 vim.keymap.set("n", "<leader>F", ":FormatWrite<CR>")
+]]--
+
+-- using the command
+vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>Centerpad<cr>', { silent = true, noremap = true })
+
+-- or using the lua function
+vim.api.nvim_set_keymap('n', '<leader>z', "<cmd>lua require'centerpad'.toggle{ leftpad = 10, rightpad = 10 }<cr>", { silent = true, noremap = true })
+

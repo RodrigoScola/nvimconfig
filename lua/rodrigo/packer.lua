@@ -15,10 +15,15 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    --use("github/copilot.vim")
+    use("github/copilot.vim")
     use("theprimeagen/harpoon")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
+
+
+		use('rebelot/kanagawa.nvim', {
+			as = 'kanagawa'
+		})
 
     -- use({
     --     'rose-pine/neovim',
@@ -28,7 +33,7 @@ return require('packer').startup(function(use)
     --     end
     -- })
 
-    use({ "ellisonleao/gruvbox.nvim", })
+ --use({ "ellisonleao/gruvbox.nvim", })
 
 
 
@@ -71,7 +76,11 @@ return require('packer').startup(function(use)
     }
 
 
-    use 'jose-elias-alvarez/null-ls.nvim'
+		use ({'jose-elias-alvarez/null-ls.nvim', 
+		requires = {
+			"nvim-lua/plenary.nvim"
+		}
+	})
 
     use {
         "williamboman/mason.nvim",
@@ -87,7 +96,12 @@ return require('packer').startup(function(use)
 
 
     }
+use('neovim/nvim-lspconfig')
+use('MunifTanjim/prettier.nvim')
 
 
     use 'm4xshen/autoclose.nvim'
+
+
+use { 'smithbm2316/centerpad.nvim' }
 end)
